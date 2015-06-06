@@ -1,0 +1,23 @@
+Usage: updateIPs.py [--ipv4-only] [--header HEADER]
+Creates a nginx confile file that contains all of cloudflare's IPs so that 
+nginx chnages the IP Header to show the visitior's IP address.
+
+
+It uses the following template:
+
+    20 set_real_ip_from   IP address;
+    [...]
+    21 real_ip_header     HEADER;
+
+The script loads the addresses from https://www.cloudflare.com/ips-v4 and
+https://www.cloudflare.com/ips-v6 if IPv6 is not disabled.
+
+You should run the script frequently since cloudflare's IP addresses can 
+change at any given time. 
+
+
+Options:
+    -4, --ipv4, --ipv4-only=False   Only loads cloudflare's IPv4 addresses.
+    -h, --header=CF-Connecting-IP   Changes the header. 
+    -f, --file                      Output file (defaults to the terminal)
+    --help                          Shows this help page.
