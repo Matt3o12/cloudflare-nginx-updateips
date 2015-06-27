@@ -138,9 +138,3 @@ class TestCase(unittest.TestCase):
         showHelp(stream)
         self.assertEqual(expected, stream.getvalue())
 
-    # def testMainShowHelp(self):
-    #     # TODO: Figure out a way to test it without printing
-    #     with self.assertRaises(SystemExit):
-    #         updateIPs.main("-h")
-
-    # TODO: Add more tests for main (if possible)
