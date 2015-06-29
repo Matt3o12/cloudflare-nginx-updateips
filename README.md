@@ -1,6 +1,6 @@
 # Cloduflare-Nginx-UpdateIPs [![Build Status](https://travis-ci.org/Matt3o12/cloudflare-nginx-updateips.svg?branch=master)](https://travis-ci.org/Matt3o12/cloudflare-nginx-updateips) #
 
-Cloduflare-Nginx-UpdateIPs collects all of cloudflare IPs and formats them so that nginx understands it. You should run this script periodically so that nginx is up-to-date with CloudFlare's IPs and your server logs won't miss the real visitor's IP address. 
+Cloduflare-Nginx-UpdateIPs collects all of CloudFlare's IPs and formats them so that nginx understands them and can restore the original visitor's ip. You should run this script periodically so that nginx is up-to-date with CloudFlare's IPs and your server logs won't miss the real visitor's IP address.
 
 ## Installation & Usage ##
 
